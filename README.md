@@ -436,4 +436,4 @@ Contribuições são bem-vindas! Para contribuir:
 
 ---
 
-**Criado com ❤️ usando [MyST Markdown](https://mystmd.org)** | [Documentação](https://mystmd.org) | [GitHub](https://github.com/parahyba/caderno)
+**Criado com ❤️ usando [MyST Markdown](https://mystmd.org)** | [Documentação](https://mystmd.org) | [GitHub](https://github.com/parahyba-com/caderno)

@@ -1,11 +1,11 @@
 version: 1
 
 project:
-  id: caderno-parahyba
-  title: "Caderno Parahyba"
+  id: caderno
+  title: "Caderno"
   description: "Ferramentas e documentação técnica de classe mundial"
   authors:
-    - name: "Caderno Parahyba Team"
+    - name: "Caderno Team"
   keywords:
     - myst
     - documentação
@@ -39,7 +39,7 @@ project:
 
 site:
   template: book-theme
-  title: "Caderno Parahyba"
+  title: "Caderno"
   
   options:
     # Preservar estrutura de pastas nas URLs (/guia-myst/cap1)
@@ -50,8 +50,8 @@ site:
     hide_outline: false
     
     # Configurações visuais
-    logo_text: "Caderno Parahyba"
+    logo_text: "Caderno"
     
   actions:
     - title: "GitHub"
-      url: https://github.com/parahyba/caderno
+      url: https://github.com/parahyba-com/caderno

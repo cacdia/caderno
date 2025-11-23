@@ -18,7 +18,7 @@ custom_theme = Theme(
     }
 )
 console = Console(theme=custom_theme)
-app = typer.Typer(help="CLI para gerenciamento do projeto Caderno Parahyba.")
+app = typer.Typer(help="CLI para gerenciamento do projeto Caderno.")
 
 
 def run_command(command: list[str], description: str, check: bool = True, cwd: Path | None = None):
