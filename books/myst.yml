@@ -1,0 +1,57 @@
+version: 1
+
+project:
+  id: caderno-parahyba
+  title: "Caderno Parahyba"
+  description: "Ferramentas e documentação técnica de classe mundial"
+  authors:
+    - name: "Caderno Parahyba Team"
+  keywords:
+    - myst
+    - documentação
+    - markdown
+    - jupyter
+    - técnica
+    - científica
+  
+  # Plugins JavaScript personalizados
+  plugins:
+    - guia-myst/qrcode.mjs
+  
+  # Tabela de conteúdo: define a navegação do site
+  toc:
+    # Root do site: / (arquivo books/index.md)
+    - file: index.md
+    
+    # Guia MyST Moderno
+    - file: guia-myst/index.md
+      title: "Guia MyST Moderno"
+      children:
+        - file: guia-myst/01-fundamentos.md
+        - file: guia-myst/02-notebooks-intro.ipynb
+        - file: guia-myst/03-notebooks-build.ipynb
+        - file: guia-myst/03-notebooks-client.ipynb
+        - file: guia-myst/04-visualizacao.md
+        - file: guia-myst/05-componentes-ui.md
+        - file: guia-myst/06-cientifico.md
+        - file: guia-myst/07-referencias.md
+        - file: guia-myst/08-plugins.md
+
+site:
+  template: book-theme
+  title: "Caderno Parahyba"
+  
+  options:
+    # Preservar estrutura de pastas nas URLs (/guia-myst/cap1)
+    folders: true
+    
+    # Configurações de navegação
+    hide_toc: false
+    hide_outline: false
+    
+    # Configurações visuais
+    logo_text: "Caderno Parahyba"
+    
+  actions:
+    - title: "GitHub"
+      url: https://github.com/parahyba/caderno

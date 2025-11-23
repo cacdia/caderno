@@ -1,0 +1,93 @@
+[project]
+name = "caderno"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "mystmd>=1.6.6",
+    "jupyter>=1.0.0",
+    "ipykernel>=6.29.0",
+    "numpy>=1.26.0",
+    "pandas>=2.2.0",
+    "matplotlib>=3.8.0",
+    "scipy>=1.12.0",
+    "plotly>=5.18.0",
+    "altair>=5.0.0",
+    "vega_datasets>=0.9.0",
+]
+
+[dependency-groups]
+dev = [
+    "pyrefly>=0.42.2",
+    "rich>=14.2.0",
+    "ruff>=0.14.6",
+    "typer>=0.20.0",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".ipynb_checkpoints",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pyenv",
+    ".pytest_cache",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    ".vscode",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "site-packages",
+    "venv",
+]
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "F",   # Pyflakes
+    "I",   # isort
+    "UP",  # pyupgrade
+    "B",   # flake8-bugbear
+    "SIM", # flake8-simplify
+]
+ignore = [
+    "E402", # Module level import not at top of file (common in notebooks)
+    "E501", # Line too long (let formatter handle it)
+]
+
+[tool.ruff.lint.per-file-ignores]
+"*.ipynb" = ["E402", "F401"] # Ignore imports not at top and unused imports in notebooks
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+docstring-code-format = true
+
+[tool.pyrefly]
+python_version = "3.12"
+project_includes = ["books"]
+project_excludes = ["**/.[!/.]*", "**/_build", "**/exports"]
+search_path = ["."]
+ignore_missing_source = true
+
+[tool.pyrefly.errors]
+missing-import = false # Often noisy in mixed environments
+
