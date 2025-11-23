@@ -1,5 +1,5 @@
 ---
-title: Caderno Parahyba
+title: Caderno
 description: Ferramentas e documentação técnica de classe mundial
 keywords:
   - myst
