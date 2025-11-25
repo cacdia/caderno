@@ -122,6 +122,28 @@ uv run myst build --html
 
 O servidor suporta **hot-reload** - edições são refletidas automaticamente no navegador.
 
+## 🐳 Build com Docker
+
+Para quem prefere usar Docker (com Typst incluído):
+
+```powershell
+# Build da imagem
+docker compose build
+
+# Executar build do exemplo-springer.md com Typst
+docker compose run --rm myst-build
+
+# Output estará em books/guia-myst/exports/
+```
+
+**Alvo do build:** `books/guia-myst/exemplo-springer.md` → `exports/artigo-typst.pdf`
+
+O container inclui:
+- Python 3.12 + uv (gerenciador de pacotes)
+- Node.js (runtime MyST)
+- Typst (compilador de documentos)
+- Todas as dependências Python do projeto
+
 ## 📚 Conteúdo Disponível
 
 ### 🏠 Landing Page
@@ -267,7 +289,12 @@ project:
       output: exports/documento.html
     - format: jats
       output: exports/documento.jats.xml
+    - format: typst
+      template: lapreprint-typst
+      output: exports/documento.pdf
 ```
+
+**Exemplo completo:** Veja `books/guia-myst/exemplo-springer.md` com 5 formatos de exportação configurados (PDF via Typst, LaTeX, Word, etc.)
 
 ### Personalizar Tema
 

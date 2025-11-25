@@ -36,6 +36,7 @@ project:
         - file: guia-myst/06-cientifico.md
         - file: guia-myst/07-referencias.md
         - file: guia-myst/08-plugins.md
+        - file: guia-myst/09-exports.md
 
 site:
   template: book-theme
