@@ -1,0 +1,26 @@
+services:
+  # Build completo (apenas Typst, sem HTML)
+  myst-build:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: caderno-myst:latest
+    volumes:
+      - .:/workspace
+    working_dir: /workspace/books
+    entrypoint: ["/bin/sh", "-c"]
+    command: ["myst build --all --execute"]
+
+
+  # Shell interativo para debug
+  myst-shell:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: caderno-myst:latest
+    volumes:
+      - .:/workspace
+    working_dir: /workspace/books
+    entrypoint: ["/bin/sh", "-c"]
+    stdin_open: true
+    tty: true
